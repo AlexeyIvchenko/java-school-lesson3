@@ -22,9 +22,9 @@ public class Solution {
         if (encrypted != null) {
             char[] stringSymbols = encrypted.toCharArray();
             for (int i = 0; i < stringSymbols.length; i++) {
-                int decryptSymbolIndex = getLatinSymbolIndex(stringSymbols[i]);
-                if (decryptSymbolIndex != -1) {
-                    char decryptedSymbol = symbols[getDecryptSymbolIndex(decryptSymbolIndex)];
+                int encryptSymbolIndex = getLatinSymbolIndex(stringSymbols[i]);
+                if (encryptSymbolIndex != -1) {
+                    char decryptedSymbol = symbols[getDecryptSymbolIndex(encryptSymbolIndex)];
                     stringBuilder.append(Character.isUpperCase(stringSymbols[i]) ? Character.toUpperCase(decryptedSymbol) : decryptedSymbol);
                 } else {
                     stringBuilder.append(stringSymbols[i]);
